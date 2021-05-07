@@ -11,6 +11,22 @@ import UIKit
 
 extension PhotoEditorViewController: UITextViewDelegate {
     
+    public func textAttribute() -> [NSAttributedString.Key : Any] {
+        // attributes of text with stroke
+        let paraStyle = NSMutableParagraphStyle()
+        paraStyle.alignment = NSTextAlignment.center
+
+        let typingAttributes: [NSAttributedString.Key : Any] = [
+            .strokeWidth: -5.0,
+            .strokeColor: self.textStrokeColor,
+            .foregroundColor: self.textColor,
+            .font: UIFont(name: "Helvetica", size: 30) as Any,
+            .paragraphStyle: paraStyle
+        ]
+        
+        return typingAttributes
+    }
+    
     public func textViewDidChange(_ textView: UITextView) {
         let rotation = atan2(textView.transform.b, textView.transform.a)
         if rotation == 0 {
@@ -50,4 +66,11 @@ extension PhotoEditorViewController: UITextViewDelegate {
         }, completion: nil)
     }
     
+}
+
+extension UITextView {
+    func updateAttribute() {
+        let text = NSAttributedString(string: self.text, attributes: self.typingAttributes)
+        self.attributedText = text
+    }
 }

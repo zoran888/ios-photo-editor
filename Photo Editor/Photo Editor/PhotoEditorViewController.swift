@@ -58,6 +58,7 @@ public final class PhotoEditorViewController: UIViewController {
     var stickersVCIsVisible = false
     var drawColor: UIColor = UIColor.black
     var textColor: UIColor = UIColor.white
+    var textStrokeColor: UIColor = UIColor.black
     var isDrawing: Bool = false
     var lastPoint: CGPoint!
     var swiped = false
@@ -140,12 +141,15 @@ public final class PhotoEditorViewController: UIViewController {
 }
 
 extension PhotoEditorViewController: ColorDelegate {
-    func didSelectColor(color: UIColor) {
+    func didSelectColor(color: UIColor, borderColor: UIColor) {
         if isDrawing {
             self.drawColor = color
         } else if activeTextView != nil {
-            activeTextView?.textColor = color
             textColor = color
+            textStrokeColor = borderColor
+            
+            activeTextView?.typingAttributes = textAttribute()
+            activeTextView?.updateAttribute()
         }
     }
 }

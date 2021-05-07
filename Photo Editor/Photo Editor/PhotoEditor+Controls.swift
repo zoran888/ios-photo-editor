@@ -69,14 +69,7 @@ extension PhotoEditorViewController {
         textView.delegate = self
       
         // attributes of text with stroke
-        let paraStyle = NSMutableParagraphStyle()
-        paraStyle.alignment = NSTextAlignment.center
-
-        textView.typingAttributes = [.strokeWidth: -5.0,
-                                   .strokeColor: UIColor.yellow,
-                                   .foregroundColor: UIColor.red,
-                                   .font: UIFont(name: "Helvetica", size: 30) as Any,
-                                   .paragraphStyle: paraStyle]
+        textView.typingAttributes = textAttribute()
       
         self.canvasImageView.addSubview(textView)
         addGestures(view: textView)
