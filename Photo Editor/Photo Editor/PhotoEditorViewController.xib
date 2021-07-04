@@ -11,6 +11,9 @@
         <array key="icomoon.ttf">
             <string>icomoon</string>
         </array>
+        <array key="impact.ttf">
+            <string>impact</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoEditorViewController" customModule="iOSPhotoEditor" customModuleProvider="target">
