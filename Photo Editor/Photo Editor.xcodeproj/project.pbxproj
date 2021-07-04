@@ -88,6 +88,7 @@
 		059EA7231EACB8790072C0FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059EA7261EACB8790072C0FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059EA7281EACB8790072C0FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C77DA7EA26922DB300B3B9F3 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +151,7 @@
 				0565132B1EF489C0009EA38F /* ColorCollectionViewCell.xib */,
 				0565132C1EF489C0009EA38F /* EmojiCollectionViewCell.xib */,
 				0565132D1EF489C0009EA38F /* icomoon.ttf */,
+				C77DA7EA26922DB300B3B9F3 /* impact.ttf */,
 				0565132E1EF489C0009EA38F /* LaunchScreen.storyboard */,
 				0565132F1EF489C0009EA38F /* PhotoCropEditorBorder.png */,
 				056513301EF489C0009EA38F /* PhotoCropEditorBorder@2x.png */,
@@ -205,6 +207,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
